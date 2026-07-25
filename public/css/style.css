@@ -187,3 +187,8 @@ html {
   background-color: rgb(42, 182, 42, 0.25);;
   border: 1px solid rgb(42, 182, 42);
 }
+
+.attribution {
+  margin-top: 4rem;
+  text-align: center;
+}
