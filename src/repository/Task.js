@@ -5,7 +5,7 @@ const model = mongoose.model('tasks', schema)
 
 class Task {
     list() {
-        return model.find({})
+        return model.find({}).sort({ updatedAt: 1 }).exec()
     }
 
     getById(_id) {

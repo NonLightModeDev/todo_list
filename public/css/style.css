@@ -82,6 +82,7 @@ html {
   grid-template-columns: 1fr;
   padding: 1rem;
   gap: 1rem;
+  align-content: start;
 }
 
 @media (max-width: 1192px) {

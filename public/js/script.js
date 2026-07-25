@@ -50,6 +50,7 @@ function addTask() {
   postTask(task.value).then(response => {
     if (response.status === 201) {
         task.value = ''
+        task.focus()
         refreshLists()
     }
   })
