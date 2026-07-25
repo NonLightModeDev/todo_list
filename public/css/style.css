@@ -15,11 +15,17 @@ html {
 }
 
 .grid {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem 0.25rem;
+}
+
+@media (max-width: 1192px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .title {
@@ -78,6 +84,14 @@ html {
   gap: 1rem;
 }
 
+@media (max-width: 1192px) {
+  .task-container {
+    justify-self: center;
+    width: 100%;
+    max-width: 600px;
+  }
+}
+
 .task-container header {
   display: flex;
   align-items: center;
@@ -86,9 +100,21 @@ html {
   justify-self: center;
 }
 
+.task-container .tasks {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
 .doing {
     border-left: 1px solid #000;
     border-right: 1px solid #000;
+}
+
+@media (max-width: 1192px) {
+  .doing {
+    border: unset;
+  }
 }
 
 .subtitle {
@@ -120,6 +146,30 @@ html {
 .task {
   border-radius: 10px;
   padding: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.task p {
+  flex: 1;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.controls button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s linear;
+}
+
+.controls button:hover {
+  transform: scale(1.05);
 }
 
 .new-task .task {

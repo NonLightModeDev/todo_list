@@ -17,14 +17,16 @@
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <script src="/js/script.js" defer></script>
   </head>
   <body>
     <h1 class="title">ToDo List</h1>
     <div class="grid">
-      <form action="" class="form">
+      <form action="" class="form" id="form">
         <div class="input">
           <label for="task">Task: </label>
-          <input type="text" name="task" id="task" />
+          <input type="text" name="task" id="task" required/>
         </div>
         <button type="submit" id="add-task">
           <span class="material-icons">add</span>
@@ -36,11 +38,6 @@
           <span class="material-icons">info</span>
         </header>
         <div class="tasks">
-            <% if (tasks != null) { %>
-                <% tasks.new.forEach(task => { %>
-                    <div class="task"><%= task.task %></div>
-                <% }) %>
-            <% } %>
         </div>
       </div>
       <div class="task-container doing">
@@ -49,11 +46,6 @@
           <span class="material-icons">timelapse</span>
         </header>
         <div class="tasks">
-            <% if (tasks != null) { %>
-                <% tasks.doing.forEach(task => { %>
-                    <div class="task"><%= task.task %></div>
-                <% }) %>
-            <% } %>
         </div>
       </div>
       <div class="task-container done">
@@ -62,11 +54,6 @@
           <span class="material-icons">done_outline</span>
         </header>
         <div class="tasks">
-            <% if (tasks != null) { %>
-                <% tasks.done.forEach(task => { %>
-                    <div class="task"><%= task.task %></div>
-                <% }) %>
-            <% } %>
         </div>
       </div>
     </div>

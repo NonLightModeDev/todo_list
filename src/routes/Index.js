@@ -3,6 +3,6 @@ import Index from '../controller/Index.js'
 
 const routerIndex = new Router()
 
-routerIndex.get('/', Index.list)
+routerIndex.get('/', Index.index)
 
 export default routerIndex

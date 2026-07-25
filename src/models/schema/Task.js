@@ -1,7 +1,10 @@
 import { Schema } from 'mongoose'
 
 const schema = new Schema({
-    task: String,
+    task: {
+        type: String,
+        unique: true
+    },
     status: String
 })
 
