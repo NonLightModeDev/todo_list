@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --font-family: 'Roboto', sans-serif;
+  --font-size-html: 18px;
+}
+
+html {
+  font-family: var(--font-family);
+  font-size: var(--font-size-html);
+}
+
+.grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem 0.25rem;
+}
+
+.title {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1rem;
+  padding: 0 2rem;
+  grid-column: 1 / -1;
+}
+
+.input {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.input input {
+  height: 1.4rem;
+  font-size: 1rem;
+  flex: 1;
+}
+
+#add-task,
+#add-task span {
+  display: flex;
+  place-items: center;
+}
+
+#add-task {
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  place-content: center;
+  background-color: rgb(42, 182, 42);
+  color: #fff;
+  border: none;
+
+  transition: background-color 0.2s linear;
+}
+
+#add-task:hover {
+  background-color: rgb(47, 202, 47);
+}
+
+.task-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.task-container header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  align-self: start;
+  justify-self: center;
+}
+
+.doing {
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+}
+
+.subtitle {
+  width: fit-content;
+  position: relative;
+}
+
+.subtitle::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: '';
+  height: 0.2rem;
+  width: 100%;
+}
+
+.new-task .subtitle::after {
+    background-color: rgb(228, 152, 54);
+}
+
+.doing .subtitle::after {
+  background-color: rgb(50, 180, 219);
+}
+
+.done .subtitle::after {
+  background-color: rgb(42, 182, 42);
+}
+
+.task {
+  border-radius: 10px;
+  padding: 0.75rem;
+}
+
+.new-task .task {
+  background-color: rgba(228, 153, 54, 0.25);
+  border: 1px solid rgb(228, 152, 54);
+}
+
+.doing .task {
+  background-color: rgb(50, 180, 219, 0.25);
+  border: 1px solid rgb(50, 180, 219);
+}
+
+.done .task {
+  background-color: rgb(42, 182, 42, 0.25);;
+  border: 1px solid rgb(42, 182, 42);
+}

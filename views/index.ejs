@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  </head>
+  <body>
+    <h1 class="title">ToDo List</h1>
+    <div class="grid">
+      <form action="" class="form">
+        <div class="input">
+          <label for="task">Task: </label>
+          <input type="text" name="task" id="task" />
+        </div>
+        <button type="submit" id="add-task">
+          <span class="material-icons">add</span>
+        </button>
+      </form>
+      <div class="task-container new-task">
+        <header>
+          <h2 class="subtitle">New Task</h2>
+          <span class="material-icons">info</span>
+        </header>
+        <div class="tasks">
+            <% if (tasks != null) { %>
+                <% tasks.new.forEach(task => { %>
+                    <div class="task"><%= task.task %></div>
+                <% }) %>
+            <% } %>
+        </div>
+      </div>
+      <div class="task-container doing">
+        <header>
+          <h2 class="subtitle">Doing</h2>
+          <span class="material-icons">timelapse</span>
+        </header>
+        <div class="tasks">
+            <% if (tasks != null) { %>
+                <% tasks.doing.forEach(task => { %>
+                    <div class="task"><%= task.task %></div>
+                <% }) %>
+            <% } %>
+        </div>
+      </div>
+      <div class="task-container done">
+        <header>
+          <h2 class="subtitle">Done</h2>
+          <span class="material-icons">done_outline</span>
+        </header>
+        <div class="tasks">
+            <% if (tasks != null) { %>
+                <% tasks.done.forEach(task => { %>
+                    <div class="task"><%= task.task %></div>
+                <% }) %>
+            <% } %>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
