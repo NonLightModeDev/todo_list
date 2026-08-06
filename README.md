@@ -31,6 +31,7 @@ npm install
 ```bash
 npm run dev
 ```
+> **Observação:** Caso vá executar a aplicação em um ambiente Linux, altere o script "dev" de "set DEBUG..." para "export DEBUG".
 
 ---
 
